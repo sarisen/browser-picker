@@ -1,0 +1,37 @@
+{
+  "$schema": "https://wvw.dev/apps.schema.json",
+  "store": "sarisen",
+  "categories": ["utilities", "productivity"],
+  "apps": [
+    {
+      "id": "browser-picker",
+      "name": "Browser Picker",
+      "subtitle": "Rule-based URL router for macOS",
+      "description": "Route links to the right browser, automatically.",
+      "longDescription": "Browser Picker intercepts every link you click and sends it to the browser you want. Define rules based on which app opened the link and which domain it points to — open work links in Chrome, personal links in Safari, and sensitive ones in Firefox with incognito mode.",
+      "icon": "https://raw.githubusercontent.com/sarisen/browser-picker/main/docs/logo.png",
+      "iconEmoji": "🔀",
+      "iconStyle": {
+        "scale": 1.0,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
+      "category": "utilities",
+      "platform": "macOS",
+      "price": "Free",
+      "github": "https://github.com/sarisen/browser-picker",
+      "downloadUrl": "https://github.com/sarisen/browser-picker/releases/latest",
+      "language": "Swift",
+      "requirements": ["macOS 14.0+"],
+      "features": [
+        "Route links by source app and domain pattern",
+        "Wildcard and regex domain matching",
+        "Open in incognito or new window",
+        "Menu bar app — no Dock icon",
+        "Zero dependencies",
+        "Plain JSON config file",
+        "43 unit tests"
+      ]
+    }
+  ]
+}

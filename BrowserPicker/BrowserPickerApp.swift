@@ -7,11 +7,13 @@ struct BrowserPickerApp: App {
     @Environment(\.openWindow) private var openWindow
 
     var body: some Scene {
-        MenuBarExtra("BrowserPicker", systemImage: "safari.fill", isInserted: Binding(
+        MenuBarExtra(isInserted: Binding(
             get: { !hideMenuBarIcon },
             set: { hideMenuBarIcon = !$0 }
         )) {
             MenuBarView()
+        } label: {
+            Image(nsImage: MenuBarIcon.make())
         }
         .menuBarExtraStyle(.menu)
 

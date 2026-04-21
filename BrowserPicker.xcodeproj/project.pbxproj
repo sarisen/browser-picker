@@ -22,6 +22,7 @@
 		BP100013 /* RuleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BP200013 /* RuleRowView.swift */; };
 		BP100014 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BP200014 /* AboutView.swift */; };
 		BP100015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BP200015 /* Assets.xcassets */; };
+		BP100016 /* MenuBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BP200018 /* MenuBarIcon.swift */; };
 		BP100020 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BP200020 /* RouterTests.swift */; };
 		BP100021 /* URLMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BP200021 /* URLMatcherTests.swift */; };
 		BP100022 /* AppMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BP200022 /* AppMatcherTests.swift */; };
@@ -56,6 +57,7 @@
 		BP200015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BP200016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BP200017 /* BrowserPicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrowserPicker.entitlements; sourceTree = "<group>"; };
+		BP200018 /* MenuBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarIcon.swift; sourceTree = "<group>"; };
 		BP300001 /* BrowserPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BP300002 /* BrowserPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowserPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BP200020 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				BP200012 /* SettingsView.swift */,
 				BP200013 /* RuleRowView.swift */,
 				BP200014 /* AboutView.swift */,
+				BP200018 /* MenuBarIcon.swift */,
 				BP200016 /* Info.plist */,
 				BP200017 /* BrowserPicker.entitlements */,
 				BP200015 /* Assets.xcassets */,
@@ -236,6 +239,7 @@
 				BP100012 /* SettingsView.swift in Sources */,
 				BP100013 /* RuleRowView.swift in Sources */,
 				BP100014 /* AboutView.swift in Sources */,
+				BP100016 /* MenuBarIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

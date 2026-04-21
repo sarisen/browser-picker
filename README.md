@@ -21,9 +21,9 @@ You define rules based on which app opened the link and which domain it points t
 Grab the latest DMG from the [releases page](../../releases/latest).
 
 1. Open the DMG and drag **Browser Picker** to Applications.
-2. If macOS shows a security warning, run:
+2. If macOS says the app is damaged or can't be opened, run:
    ```
-   xattr -c /Applications/BrowserPicker.app
+   xattr -cr /Applications/BrowserPicker.app
    ```
 3. Launch Browser Picker — it appears in the menu bar, not the Dock.
 

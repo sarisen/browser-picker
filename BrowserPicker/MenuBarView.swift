@@ -17,31 +17,22 @@ struct MenuBarView: View {
             Divider()
         }
 
-        // Browser list
-        VStack(alignment: .leading, spacing: 0) {
-            Text("Default Browser")
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .padding(.horizontal, 12)
-                .padding(.top, 4)
-                .padding(.bottom, 2)
-
+        // Browser list with native checkmark via Picker
+        Picker("Default Browser", selection: $selectedDefault) {
             ForEach(BrowserScanner.all()) { browser in
-                let active = browser.id == selectedDefault
-                Button(action: { pick(browser.id) }) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 11, weight: .semibold))
-                            .foregroundColor(.accentColor)
-                            .opacity(active ? 1 : 0)
-                            .frame(width: 12)
-                        if let icon = browser.icon {
-                            Image(nsImage: icon)
-                        }
-                        Text(browser.name)
+                Label {
+                    Text(browser.name)
+                } icon: {
+                    if let icon = browser.icon {
+                        Image(nsImage: icon)
                     }
                 }
+                .tag(browser.id)
             }
+        }
+        .pickerStyle(.inline)
+        .onChange(of: selectedDefault) { _, newValue in
+            save(newValue)
         }
 
         Divider()
@@ -68,11 +59,10 @@ struct MenuBarView: View {
             .keyboardShortcut("q", modifiers: .command)
     }
 
-    private func pick(_ browserID: String) {
+    private func save(_ browserID: String) {
         var config = ConfigStore.shared.loadOrDefault()
         config.defaultBrowserID = browserID
         try? ConfigStore.shared.save(config)
-        selectedDefault = browserID
         NotificationCenter.default.post(name: .configDidChange, object: nil)
     }
 }

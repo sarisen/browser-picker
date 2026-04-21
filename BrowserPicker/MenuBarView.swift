@@ -30,16 +30,15 @@ struct MenuBarView: View {
                 let active = browser.id == selectedDefault
                 Button(action: { pick(browser.id) }) {
                     HStack(spacing: 8) {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundColor(.accentColor)
+                            .opacity(active ? 1 : 0)
+                            .frame(width: 12)
                         if let icon = browser.icon {
                             Image(nsImage: icon)
                         }
                         Text(browser.name)
-                        Spacer()
-                        if active {
-                            Image(systemName: "checkmark")
-                                .font(.system(size: 11, weight: .semibold))
-                                .foregroundColor(.accentColor)
-                        }
                     }
                 }
             }

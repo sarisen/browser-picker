@@ -21,9 +21,9 @@ Linki hangi uygulamanın açtığını ve hangi domaine gittiğini temel alan ku
 En son DMG dosyasını [releases sayfasından](../../releases/latest) indirin.
 
 1. DMG'yi açın ve **Browser Picker**'ı Applications klasörüne sürükleyin.
-2. macOS "hasar görmüş" veya "açılamıyor" uyarısı verirse şu komutu çalıştırın:
+2. macOS güvenlik uyarısı gösterirse şu komutu çalıştırın:
    ```
-   xattr -cr /Applications/BrowserPicker.app
+   xattr -c /Applications/BrowserPicker.app
    ```
 3. Browser Picker'ı başlatın — Dock'ta değil, menü çubuğunda görünür.
 
